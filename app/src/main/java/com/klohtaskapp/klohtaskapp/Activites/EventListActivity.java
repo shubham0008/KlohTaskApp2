@@ -5,6 +5,8 @@ import android.content.Context;
 import android.location.Location;
 import android.location.LocationListener;
 import android.location.LocationManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -37,7 +39,7 @@ import retrofit2.Response;
 
 public class EventListActivity extends AppCompatActivity implements GoogleApiClient.ConnectionCallbacks, GoogleApiClient.OnConnectionFailedListener {
 
-    private static final String TAG ="Hello" ;
+    private static final String TAG ="API_DEBUG_LOG" ;
     ApiInterface apiService;
     private ArrayList<EventListCardModel> eventList = new ArrayList<>();
     private double lat;
@@ -67,8 +69,20 @@ public class EventListActivity extends AppCompatActivity implements GoogleApiCli
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_list);
         apiService = ApiClient.getClient().create(ApiInterface.class);
+       //default check locations
         lat=12.926031;
         lon=77.676246;
+
+        //Net Connection Issue
+        if (isNetConnected(getApplicationContext())) {
+            Toast.makeText(getApplicationContext(), "Connected to Internet", Toast.LENGTH_SHORT).show();
+
+        } else {
+            Toast.makeText(getApplicationContext(), "Not Connected to Internet", Toast.LENGTH_SHORT).show();
+
+        }
+
+
         recyclerView = (RecyclerView) findViewById(R.id.tag_recycler_view);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         // Building the GoogleApi client
@@ -82,7 +96,6 @@ public class EventListActivity extends AppCompatActivity implements GoogleApiCli
         }
         // Show location button click listener
         getLocation();
-
 
 
     }
@@ -206,6 +219,12 @@ public class EventListActivity extends AppCompatActivity implements GoogleApiCli
                 Log.e(TAG, t.toString());
             }
         });
+
+    }
+    public static boolean isNetConnected(Context context) {
+        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkInfo = connectivityManager.getActiveNetworkInfo();
+        return (networkInfo != null && networkInfo.isConnected());
     }
 
 

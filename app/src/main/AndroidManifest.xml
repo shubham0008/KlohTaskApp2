@@ -14,7 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <meta-data android:name="com.google.android.maps.v2.API_KEY"
-            android:value="AIzaSyCv0EKZ7WxirSW0V-lrUI6zKt-8hl5QwRU" />
+            android:value="AIzaSyC87cBkKghqopKulQy5OOxGd7_3vgmP0nQ" />
         <activity android:name=".Activites.EventListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
