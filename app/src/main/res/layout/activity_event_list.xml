@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activites.EventListActivity">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:id="@+id/list_actionbar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/listact_back_button_view"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="5dp"
+                android:src="@drawable/ic_search_black_24dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:textSize="18dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/colorPrimary"
+                android:text="Events near you"/>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:id="@+id/tag_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+
+</LinearLayout>

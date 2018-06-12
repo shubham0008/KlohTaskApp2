@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content">
+
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/event_card"
+        android:elevation="10dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/evt_picture_view"
+            android:src="#000"
+            android:scaleType="fitXY"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Night of the MAFIAs"
+                android:textStyle="bold"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="5dp"
+                android:id="@+id/evt_title_view"
+                android:textColor="@color/colorAccent"
+                android:layout_marginRight="5dp"
+                android:textSize="26sp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:id="@+id/content_container"
+                android:layout_alignParentBottom="true"
+                android:alpha="0.9"
+                android:orientation="vertical"
+                android:background="#fff" >
+                <TextView
+                    android:id="@+id/evt_date_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Fri Jun 15 at 08:00 PM"
+                    android:layout_marginLeft="85dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_gravity="right"
+                    android:textSize="18sp"
+                    android:drawableLeft="@drawable/ic_access_time_black_24dp"
+                   />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/evt_summary_view"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.5"
+                        android:gravity="center"
+                        android:layout_height="match_parent"
+                        android:text="What would you do when MAFIAs attack your peaceful village?"
+                        android:layout_marginLeft="10dp"
+                        android:maxLines="2"
+                        android:textSize="12sp"
+                        android:textColor="#000"
+                        />
+                    <TextView
+                        android:id="@+id/evt_location_view"
+                        android:layout_width="0dp"
+                        android:layout_weight="0.3"
+                        android:gravity="center"
+                        android:layout_height="match_parent"
+                        android:text=" @Banstap"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="14sp"
+                        android:textColor="@color/colorPrimaryDark"
+                       />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginBottom="40dp"
+                android:layout_marginStart="10dp"
+                android:id="@+id/evt_host_picture_view"
+
+                android:src="@drawable/ic_help_black_24dp"/>
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</RelativeLayout>

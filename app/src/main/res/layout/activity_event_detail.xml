@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activites.EventDetailActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+         <android.support.v7.widget.CardView
+             android:layout_width="match_parent"
+             android:layout_height="60dp"
+             android:id="@+id/et_actionbar">
+             <RelativeLayout
+                 android:layout_width="match_parent"
+                 android:layout_height="match_parent">
+             <ImageView
+                 android:layout_width="30dp"
+                 android:layout_height="30dp"
+                 android:id="@+id/back_button_view"
+                 android:layout_centerVertical="true"
+                 android:layout_marginLeft="5dp"
+                 android:src="@drawable/ic_arrow_back_black_24dp"/>
+             <TextView
+                 android:id="@+id/event_title_view"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:textStyle="bold"
+                 android:layout_alignParentRight="true"
+                 android:layout_centerVertical="true"
+                 android:textSize="18dp"
+                 android:layout_marginRight="10dp"
+                 android:textColor="@color/colorPrimary"
+                 android:text="This is Magic"/>
+             </RelativeLayout>
+         </android.support.v7.widget.CardView>
+            <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="10dp"
+                android:layout_below="@+id/et_actionbar"
+                android:scaleType="centerCrop"
+        android:id="@+id/event_imageview"
+        android:background="#c6c6c6"
+        />
+            <TextView
+                android:id="@+id/event_summary_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="The motive of test your basic Android development skills and to find out the best role suitable for you in the company."
+                android:layout_below="@+id/event_imageview"/>
+
+            <TextView
+                android:id="@+id/event_time_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/event_summary_view"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="30dp"
+                android:text="5th July, 12:30 PM"
+                android:textStyle="bold"
+                android:textColor="#bf3e3e3e"
+                android:textSize="20sp"
+                android:layout_marginRight="10dp"/>
+            <TextView
+                android:id="@+id/event_location_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/event_time_view"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="30dp"
+                android:text=" @bairut"
+                android:textStyle="bold"
+                android:textColor="@color/colorPrimaryDark"
+                android:textSize="18sp"
+                android:layout_marginRight="10dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="30dp"
+                android:id="@+id/ll_host"
+                android:layout_below="@id/event_location_view"
+                >
+                <ImageView
+                    android:id="@+id/event_host_image_view"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/ic_access_time_black_24dp"/>
+                <TextView
+                    android:id="@+id/event_host_name_view"
+                    android:layout_weight="1"
+                    android:layout_width="0dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:text="Hosted by:Kloh"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    />
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rl_ds"
+                android:layout_below="@+id/ll_host"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:background="#b9e7d5">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Description"
+                    android:textSize="20sp"
+                    android:id="@+id/view_des"
+                    android:layout_marginLeft="10dp"
+                    android:textStyle="bold"
+                    />
+                <TextView
+                    android:id="@+id/event_descrpition_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/view_des"
+                    android:layout_marginLeft="20dp"
+                    android:paddingBottom="20dp"
+                    android:layout_marginRight="10dp"
+                    android:text="The motive of test your basic Android
+  1. Stability: Please ensure that there are no crashes and all corner cases are handled.
+2. The efficiency of the code: The code should have components that are getting reused in listView.
+3. Functional Completeness: The code should be functionally complete with the mentioned features.
+4. Readability and cleanliness of the code: Use good variable names so that the code is readable.development skills and to find out the best role suitable for you in the company."/>
+            </RelativeLayout>
+
+            <com.google.android.gms.maps.MapView
+                android:id="@+id/map_view"
+                android:layout_below="@id/rl_ds"
+                android:layout_width="match_parent"
+                android:layout_height="200dp">
+            </com.google.android.gms.maps.MapView>
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+</RelativeLayout>
