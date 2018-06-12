@@ -105,8 +105,8 @@ public class EventListActivity extends AppCompatActivity implements GoogleApiCli
                 .getLastLocation(mGoogleApiClient);
 
         if (mLastLocation != null) {
-//            lat = mLastLocation.getLatitude();
-//            lon = mLastLocation.getLongitude();
+            lat = mLastLocation.getLatitude();
+            lon = mLastLocation.getLongitude();
             getEventList(lat,lon);
             String k = "longitude:" + lon + " lattitude:" + lat;
             Log.d(getPackageName(), "displayLocation: " + k);
