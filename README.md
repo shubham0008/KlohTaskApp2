@@ -1,5 +1,5 @@
 # KlohTaskApp|Android Application
-Implementation of Kloh API
+Implementation of Kloh API using Android SDK and Retrofit.
 
 ### Features
 * 1. Specified Events Based on User Location<br /> 
